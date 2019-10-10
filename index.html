@@ -177,7 +177,7 @@
       
     
 
-    <a href="/resume" rel="section"><i class="fa fa-fw fa-question-circle"></i>resume</a>
+    <a href="/resume/" rel="section"><i class="fa fa-fw fa-user"></i>Resume</a>
 
   </li>
   </ul>
@@ -246,7 +246,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-10-10 19:00:41" itemprop="dateModified" datetime="2019-10-10T19:00:41+08:00">2019-10-10</time>
+                <time title="Modified: 2019-10-10 20:53:41" itemprop="dateModified" datetime="2019-10-10T20:53:41+08:00">2019-10-10</time>
               </span>
             
           
@@ -262,7 +262,14 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="I-start-my-research-in-SenseTime"><a href="#I-start-my-research-in-SenseTime" class="headerlink" title="I start my research in SenseTime"></a>I start my research in SenseTime</h1>
+          <h1 id="Person-Re-identification-research-in-SenseTime"><a href="#Person-Re-identification-research-in-SenseTime" class="headerlink" title="Person Re-identification research in SenseTime"></a>Person Re-identification research in SenseTime</h1><p>I started my research in SenseTime since March 2019 as CV research intern. I mainly focus on <strong>Target Re-Identification(REID)</strong> on large scale dataset.</p>
+<h1 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h1><p>Person re-identification (ReID) has achieved significant improvement under the single-domain setting. However, directly exploiting a model to new domains is always faced with huge performance drop, and adapting the model to new domains without target-domain identity labels is still challenging. Though researchers now have reached both high accuracy and Top-K on large datasets like Market1501, CUHK03 and DukeMTMC-reID, I argue that the problem of re-identification is <strong>far from solved</strong>. Here I list 2 reasons below:</p>
+<h2 id="False-Tesing-Method"><a href="#False-Tesing-Method" class="headerlink" title="False Tesing Method"></a>False Tesing Method</h2><p>   The current model testing method contradicts with real scene. ReID is essentially a <strong>ZSL(zero shot learning)</strong> problem and the testing domain usually share no overlap with the training domain. However, the current published paper still verify the effectiveness of their method by training and testing on the same dataset. Although the ID does not overlap, they basically share the same domain which is evidently impossible under real scene.  </p>
+<h2 id="Limited-Dataset-Size"><a href="#Limited-Dataset-Size" class="headerlink" title="Limited Dataset Size"></a>Limited Dataset Size</h2><p>   The current released dataset’s size cannot support the deployment of ReID system. Most published method demonstrates thir effectiveness by showing the their result on Market1501(1500 IDs) and CUHK03(1467 IDs), however, under real scene, the retrivel will be million-scale under different scenaries.<br>Therefore, I argue that the development future of ReID lies on the improvement of model generalization and adaptation under different scenaries.</p>
+<h1 id="My-work"><a href="#My-work" class="headerlink" title="My work"></a>My work</h1><p>My research in SenseTime is focused on solving domain adaptation and model generalization with <strong>part-based</strong> and <strong>semantic-aided</strong> CNN models. </p>
+<p>As global feature cannot provide enough information, local and semantic information can provide auxiliary context.</p>
+<p>Our research and model supported ten million level person classification and retrieval with high mean average precision.</p>
+
         
       
     </div>
