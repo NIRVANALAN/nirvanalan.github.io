@@ -1,10 +1,16 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   background: #fff;
   color: #222;
   font-family: "Lato", Verdana, Helvetica, sans-serif;
-  font-size: 14px;
-  line-height: 1.55;
+  font-size: 15.5px;
+  line-height: 1.65;
 }
 
 a {
@@ -25,21 +31,21 @@ video {
 }
 
 .page {
-  width: min(100% - 32px, 860px);
+  width: min(100% - 44px, 980px);
   margin: 0 auto;
-  padding: 26px 0 40px;
+  padding: 28px 0 44px;
 }
 
 .profile {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 210px;
-  gap: 28px;
+  grid-template-columns: minmax(0, 1fr) 220px;
+  gap: 34px;
   align-items: center;
 }
 
 .profile h1 {
   margin: 0 0 14px;
-  font-size: 32px;
+  font-size: 35px;
   font-weight: 700;
   text-align: center;
 }
@@ -49,6 +55,10 @@ video {
 }
 
 .profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px 10px;
   text-align: center;
 }
 
@@ -67,12 +77,12 @@ video {
 }
 
 .section {
-  margin-top: 30px;
+  margin-top: 34px;
 }
 
 .section h2 {
   margin: 0;
-  font-size: 21px;
+  font-size: 24px;
   font-weight: 700;
 }
 
@@ -121,7 +131,7 @@ video {
   margin: 2px 0 0;
   padding-top: 4px;
   color: #444;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
 }
 
@@ -138,8 +148,8 @@ video {
 
 .publication {
   display: grid;
-  grid-template-columns: 180px minmax(0, 1fr);
-  gap: 18px;
+  grid-template-columns: 200px minmax(0, 1fr);
+  gap: 22px;
   align-items: start;
 }
 
@@ -150,7 +160,7 @@ video {
 }
 
 .publication-media {
-  width: 180px;
+  width: 200px;
 }
 
 .publication-media img,
@@ -166,7 +176,7 @@ video {
 .publication-content h3,
 .earlier-publication h3 {
   margin: 0 0 6px;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 700;
 }
 
@@ -189,6 +199,7 @@ video {
 
 .links {
   margin-bottom: 0;
+  line-height: 1.7;
 }
 
 .bibtex-link {
@@ -255,12 +266,13 @@ video {
 
 @media (max-width: 700px) {
   .page {
-    width: min(100% - 20px, 860px);
-    padding-top: 20px;
+    width: min(100% - 20px, 980px);
+    padding-top: 18px;
   }
 
   .profile {
     grid-template-columns: 1fr;
+    gap: 18px;
   }
 
   .profile-image-wrap {
@@ -269,17 +281,79 @@ video {
     order: -1;
   }
 
+  .profile h1 {
+    font-size: 30px;
+    line-height: 1.15;
+  }
+
+  .section {
+    margin-top: 28px;
+  }
+
+  .section h2 {
+    font-size: 22px;
+  }
+
   .publication {
     grid-template-columns: 1fr;
     gap: 12px;
   }
 
   .publication-media {
-    width: 100%;
-    max-width: 220px;
+    width: min(100%, 320px);
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .publication-content h3,
+  .earlier-publication h3 {
+    font-size: 16px;
+  }
+
+  .profile-links span {
+    display: none;
+  }
+
+  .links span {
+    margin: 0 5px;
+  }
+
+  .bibtex-panel pre {
+    font-size: 11.5px;
   }
 
   .footer p {
     text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .page {
+    width: min(100% - 16px, 980px);
+    padding-top: 16px;
+    padding-bottom: 32px;
+  }
+
+  .profile h1 {
+    font-size: 28px;
+  }
+
+  .profile p,
+  .publication-content p,
+  .earlier-publication p {
+    margin-bottom: 10px;
+  }
+
+  .publication-subtitle {
+    font-size: 17px;
+  }
+
+  .section-header {
+    margin-bottom: 12px;
   }
 }
