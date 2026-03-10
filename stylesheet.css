@@ -31,7 +31,7 @@ video {
 }
 
 .page {
-  width: min(100% - 44px, 980px);
+  width: min(100% - 32px, 1040px);
   margin: 0 auto;
   padding: 28px 0 44px;
 }
