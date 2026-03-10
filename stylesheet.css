@@ -159,6 +159,10 @@ video {
   background: #f3f3f3;
 }
 
+.publication-media video {
+  min-height: 100px;
+}
+
 .publication-content h3,
 .earlier-publication h3 {
   margin: 0 0 6px;
