@@ -1585,7 +1585,9 @@
 
             if (!panel.dataset.loaded) {
               try {
-                const response = await fetch(link.getAttribute("href"));
+                const bibtexUrl = new URL(link.getAttribute("href"), window.location.href);
+                bibtexUrl.searchParams.set("v", Date.now().toString());
+                const response = await fetch(bibtexUrl, { cache: "no-store" });
                 if (!response.ok) {
                   throw new Error("Failed to load");
                 }
