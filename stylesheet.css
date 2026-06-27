@@ -304,10 +304,13 @@ video {
 .map-fallback,
 .map-noscript {
   display: none;
-  color: #777;
-  font-size: 13px;
-  line-height: 1.5;
   margin: 8px 0 0;
+}
+
+.map-fallback img,
+.map-noscript img {
+  max-width: 100%;
+  height: auto;
 }
 
 .map-wrap.map-unavailable .map-fallback {
