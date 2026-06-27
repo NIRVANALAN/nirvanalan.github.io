@@ -301,6 +301,23 @@ video {
   max-width: 360px;
 }
 
+.map-fallback,
+.map-noscript {
+  display: none;
+  color: #777;
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 8px 0 0;
+}
+
+.map-wrap.map-unavailable .map-fallback {
+  display: block;
+}
+
+noscript .map-noscript {
+  display: block;
+}
+
 .footer {
   margin-top: 28px;
   padding-top: 12px;

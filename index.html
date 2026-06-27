@@ -305,7 +305,7 @@
           <article
             class="publication publication-after-subtitle"
             data-author-rank="2"
-            data-tags="world-models spatial-intelligence 3d-4d-reconstruction dataset"
+            data-tags="world-models spatial-intelligence 3d-4d-reconstruction Dataset"
             data-title="PhysiFormer"
             data-year="2026"
           >
@@ -355,7 +355,7 @@
           <article
             class="publication publication-after-subtitle"
             data-author-rank="0"
-            data-tags="spatial-intelligence 3d-4d-reconstruction dataset"
+            data-tags="spatial-intelligence 3d-4d-reconstruction Dataset"
             data-title="Syn4D"
             data-year="2026"
           >
@@ -1350,10 +1350,52 @@
         <div class="map-wrap">
           <script
             type="text/javascript"
-            id="clustrmaps"
-            src="//cdn.clustrmaps.com/map_v2.js?cl=ffffff&amp;w=a&amp;t=tt&amp;d=uLEI4e3dpDHqYuj0M071jzmidCzckl28Ogdc5cRNpws"
+            id="mapmyvisitors"
+            src="https://mapmyvisitors.com/map.js?d=uLEI4e3dpDHqYuj0M071jzmidCzckl28Ogdc5cRNpws&amp;cl=ffffff&amp;w=a"
+            onerror="this.parentElement.classList.add('map-unavailable')"
           ></script>
+          <p class="map-fallback">
+            Visitor map is loaded from MapMyVisitors and may be blocked by privacy
+            extensions or third-party script restrictions.
+          </p>
+          <noscript>
+            <p class="map-noscript">
+              Visitor map requires JavaScript from MapMyVisitors.
+            </p>
+          </noscript>
         </div>
+        <script>
+          (function () {
+            const mapWrap = document.querySelector(".map-wrap");
+            const mapScript = document.getElementById("mapmyvisitors");
+
+            if (!mapWrap || !mapScript) {
+              return;
+            }
+
+            const hasMapContent = () => {
+              return Array.from(mapWrap.children).some((child) => {
+                if (
+                  child === mapScript ||
+                  child.classList.contains("map-fallback") ||
+                  child.tagName.toLowerCase() === "noscript"
+                ) {
+                  return false;
+                }
+
+                return true;
+              });
+            };
+
+            const markUnavailableIfEmpty = () => {
+              if (!hasMapContent()) {
+                mapWrap.classList.add("map-unavailable");
+              }
+            };
+
+            window.setTimeout(markUnavailableIfEmpty, 3000);
+          })();
+        </script>
       </section>
 
       <!--
