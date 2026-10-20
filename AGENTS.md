@@ -31,21 +31,22 @@
   - `data-year`
   - `data-author-rank`
   - `data-title`
-  - `data-tags`
+  - `data-tags` (exception: Magnifier has no tags on purpose and only shows under All)
 - Current publication tags in use:
   - `preprints`
   - `world-models`
+  - `video-generation`
   - `3d-generation`
   - `3d-4d-reconstruction`
   - `spatial-intelligence`
-  - `3d-avatars`
   - `3d-correspondence`
+- `3d-avatars` was merged into `3d-generation`; do not reintroduce it.
 - Topic/filter order should remain:
   1. `world-models`
-  2. `spatial-intelligence`
-  3. `3d-4d-reconstruction`
-  4. `3d-generation`
-  5. `3d-avatars`
+  2. `video-generation`
+  3. `spatial-intelligence`
+  4. `3d-4d-reconstruction`
+  5. `3d-generation`
   6. `3d-correspondence`
   7. `preprints`
 

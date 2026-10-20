@@ -31,7 +31,7 @@ video {
 }
 
 .page {
-  width: min(100% - 32px, 1040px);
+  width: min(100% - 32px, 880px); /* was 1040px; closer to Jon Barron's 800px */
   margin: 0 auto;
   padding: 28px 0 44px;
 }
@@ -52,6 +52,11 @@ video {
 
 .profile p {
   margin: 0 0 14px;
+}
+
+/* Avoid one-word last lines (browsers without support just ignore it). */
+p {
+  text-wrap: pretty;
 }
 
 .profile-links {
@@ -194,8 +199,23 @@ video {
 
 .publication-media img,
 .publication-media video {
+  aspect-ratio: 16 / 9; /* uniform thumbnails; whole image kept visible */
+  object-fit: contain;
   border-radius: 4px;
-  background: #f3f3f3;
+  background: #f5f5f5;
+}
+
+/* First-author work, highlighted like Jon Barron's list. */
+.publication-highlight {
+  margin: 0 -12px;
+  padding: 12px;
+  border-top-color: transparent;
+  border-radius: 6px;
+  background: #fffbe8;
+}
+
+.publication-highlight + .publication {
+  border-top-color: transparent;
 }
 
 .publication-media video {
@@ -387,6 +407,12 @@ noscript .map-noscript {
   .publication-content h3,
   .earlier-publication h3 {
     font-size: 16px;
+  }
+
+  /* No bleed past the narrow phone gutter. */
+  .publication-highlight {
+    margin: 0;
+    padding: 10px;
   }
 
   .profile-links span {

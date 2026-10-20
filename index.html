@@ -30,15 +30,15 @@
             I am a postdoctoral researcher at the
             <a href="https://www.robots.ox.ac.uk/~vgg/">Visual Geometry Group</a>,
             University of Oxford, working with
-            <a href="https://www.robots.ox.ac.uk/~vedaldi/">Prof. Andrea Vedaldi</a>.
+            <a href="https://www.robots.ox.ac.uk/~vedaldi/">Prof.&nbsp;Andrea&nbsp;Vedaldi</a>.
           </p>
           <p>
             I received my Ph.D. from
             <a href="https://www.ntu.edu.sg/">Nanyang Technological University</a>,
             advised by
-            <a href="https://www.mmlab-ntu.com/person/ccloy/">Prof. Chen Change Loy</a>
+            <a href="https://www.mmlab-ntu.com/person/ccloy/">Prof.&nbsp;Chen&nbsp;Change&nbsp;Loy</a>
             and
-            <a href="https://xingangpan.github.io/">Asst. Prof. Xingang Pan</a>
+            <a href="https://xingangpan.github.io/">Asst.&nbsp;Prof.&nbsp;Xingang&nbsp;Pan</a>
             at <a href="https://www.mmlab-ntu.com">MMLab@NTU</a>. Earlier, I earned my
             B.Eng. in Software Engineering from Yepeida Honors College,
             <a href="https://www.bupt.edu.cn">BUPT</a>.
@@ -62,6 +62,8 @@
             class="profile-image"
             src="images/yslan-indo.jpeg"
             alt="Portrait of Yushi Lan"
+            width="1466"
+            height="978"
           >
         </div>
       </header>
@@ -70,6 +72,7 @@
         <div class="section-header">
           <h2>About Me</h2>
         </div>
+        <!-- Previous version:
         <p>
           I am interested in the intersection of computer vision, computer graphics,
           and machine learning. My recent interests include Spatial AI, Embodied AI,
@@ -78,6 +81,12 @@
           worked on shape analysis, inverse graphics, neural rendering, and 3D
           avatars.
         </p>
+        -->
+        <p>
+          My current focus is <strong>Physical&nbsp;AI</strong>: bringing spatial
+          intelligence (3D/4D perception, reconstruction, and generation) to embodied
+          agents that understand and act in the physical world.
+        </p>
         <p>
           In 2025, I was selected as an Outstanding Prize recipient of the
           <a href="https://www.meshy.ai/blog/fellowship-2025">Meshy Fellowship 2025</a>.
@@ -85,9 +94,7 @@
           Expanding the Generality of Neural Fields
           <a
             href="https://dr.ntu.edu.sg/server/api/core/bitstreams/1c6b00da-46f6-4572-b08d-c04a6b81e00c/content"
-          >
-            [PDF]
-          </a>,
+          >[PDF]</a>,
           is available online.
         </p>
       </section>
@@ -95,7 +102,7 @@
       <section class="section">
         <div class="section-header">
           <h2>News</h2>
-          <p>Recent updates.</p>
+          <!-- <p>Recent updates.</p> -->
         </div>
         <div class="news-scroll">
         <ul class="news-list">
@@ -113,9 +120,7 @@
             <span class="news-date">[2026-06]</span>
             <span>
               We are organizing
-              <a href="https://phys-ai-workshop.github.io/eccv26/">
-                PhysAI 2026
-              </a>,
+              <a href="https://phys-ai-workshop.github.io/eccv26/">PhysAI 2026</a>,
               the 1st Workshop on Physical AI at ECCV 2026, on September 9, 2026.
             </span>
           </li>
@@ -281,15 +286,19 @@
       <section class="section" id="publications">
         <div class="section-header">
           <h2>Selected Publications</h2>
-          <p>Selected work from 2020 to 2026.</p>
+          <!-- <p>Selected work from 2020 to 2026.</p> -->
         </div>
         <p class="publication-filters" aria-label="Publication filters">
           <a class="publication-filter is-active" href="#publications" data-filter="all">
-            All Publications
+            All
           </a>
           <span>|</span>
           <a class="publication-filter" href="#publications" data-filter="world-models">
             World Models
+          </a>
+          <span>|</span>
+          <a class="publication-filter" href="#publications" data-filter="video-generation">
+            Video Generation
           </a>
           <span>|</span>
           <a class="publication-filter" href="#publications" data-filter="spatial-intelligence">
@@ -304,10 +313,12 @@
             3D Generation
           </a>
           <span>|</span>
+          <!-- 3D Avatars merged into 3D Generation.
           <a class="publication-filter" href="#publications" data-filter="3d-avatars">
             3D Avatars
           </a>
           <span>|</span>
+          -->
           <a class="publication-filter" href="#publications" data-filter="3d-correspondence">
             3D Correspondence
           </a>
@@ -323,15 +334,15 @@
 
           <div class="publication-group" data-sort-strategy="year-author-rank">
           <article
-            class="publication"
+            class="publication publication-highlight"
             data-author-rank="1"
-            data-tags="world-models 3d-4d-reconstruction"
+            data-tags="video-generation spatial-intelligence 3d-4d-reconstruction"
             data-month="12"
             data-title="Holo4D"
             data-year="2026"
           >
             <div class="publication-media">
-              <video autoplay loop muted playsinline preload="metadata">
+              <video loop muted playsinline preload="none" poster="images/posters/holo4d.jpg">
                 <source src="images/holo4d/holo4d-thumb.mp4" type="video/mp4">
               </video>
             </div>
@@ -377,7 +388,7 @@
             data-year="2026"
           >
             <div class="publication-media">
-              <video autoplay loop muted playsinline preload="metadata">
+              <video loop muted playsinline preload="none" poster="images/posters/physiformer.jpg">
                 <source
                   src="https://yimingc9.github.io/assets/videos/all_mat_chained.mp4"
                   type="video/mp4"
@@ -417,7 +428,7 @@
 
           <!-- Syn4D is co-first authored and featured before STream3R in the 2026 list. -->
           <article
-            class="publication publication-after-subtitle"
+            class="publication publication-after-subtitle publication-highlight"
             data-author-rank="0"
             data-tags="spatial-intelligence 3d-4d-reconstruction Dataset"
             data-month="9"
@@ -471,7 +482,7 @@
           </article>
 
           <article
-            class="publication publication-after-subtitle"
+            class="publication publication-after-subtitle publication-highlight"
             data-author-rank="3"
             data-tags="3d-4d-reconstruction 3d-correspondence"
             data-month="7"
@@ -479,11 +490,10 @@
             data-year="2026"
           >
             <div class="publication-media">
-              <img
-                src="https://shangchenzhou.com/assets/img/papers/4RC.gif"
-                alt="4RC preview"
-                loading="lazy"
-              >
+              <!-- Was hotlinked GIF: https://shangchenzhou.com/assets/img/papers/4RC.gif -->
+              <video loop muted playsinline preload="none" poster="images/posters/4rc.jpg" aria-label="4RC preview">
+                <source src="images/thumbs/4rc.mp4" type="video/mp4">
+              </video>
             </div>
             <div class="publication-content">
               <h3>
@@ -527,7 +537,7 @@
             data-year="2026"
           >
             <div class="publication-media">
-              <video autoplay loop muted playsinline preload="metadata">
+              <video loop muted playsinline preload="none" poster="images/posters/vfmf.jpg">
                 <source src="images/vfmf/vfmf-thumb.mp4" type="video/mp4">
               </video>
             </div>
@@ -564,13 +574,13 @@
           <article
             class="publication"
             data-author-rank="4"
-            data-tags="spatial-intelligence world-models"
+            data-tags="world-models video-generation spatial-intelligence"
             data-month="6"
             data-title="Video4Spatial"
             data-year="2026"
           >
             <div class="publication-media">
-              <video autoplay loop muted playsinline preload="metadata">
+              <video loop muted playsinline preload="none" poster="images/posters/video4spatial.jpg">
                 <source
                   src="https://xizaoqu.github.io/images/video4spatial.mp4"
                   type="video/mp4"
@@ -591,7 +601,7 @@
                 <strong>Yushi Lan</strong>,
                 <a href="https://ningyu1991.github.io/">Ning Yu</a>,
                 <a href="https://rahuldotgarg.appspot.com/">Rahul Garg</a>,
-                <a href="https://www.linkedin.com/in/roshni-cooper/">Roshni Cooper</a>,
+                <!-- Not in the official CVPR Findings author list: <a href="https://www.linkedin.com/in/roshni-cooper/">Roshni Cooper</a>, -->
                 <a href="https://scholar.google.com/citations?user=Qpjm3JQAAAAJ&amp;hl=en">Mohammad H. Taghavi</a>,
                 <a href="https://xingangpan.github.io/">Xingang Pan</a>
               </p>
@@ -612,7 +622,7 @@
           </article>
 
           <article
-            class="publication"
+            class="publication publication-highlight"
             data-author-rank="1"
             data-tags="3d-4d-reconstruction"
             data-month="4"
@@ -620,7 +630,7 @@
             data-year="2026"
           >
             <div class="publication-media">
-              <video autoplay loop muted playsinline preload="metadata">
+              <video loop muted playsinline preload="none" poster="images/posters/stream3r.jpg">
                 <source src="images/stream3r/dancing_wo_camera.mp4" type="video/mp4">
               </video>
             </div>
@@ -653,7 +663,7 @@
                 <span>/</span>
                 <!-- <a href="https://arxiv.org/abs/2508.10893">arXiv</a>
                 <span>/</span> -->
-                <a href="https://openreview.net/pdf?id=RTTYGeC2Io">Paper</a>
+                <a href="https://openreview.net/pdf?id=RTTYGeC2Io">paper</a>
                 <span>/</span>
                 <a href="https://github.com/NIRVANALAN/STream3R">code</a>
                 <span>/</span>
@@ -665,15 +675,15 @@
           </article>
 
           <article
-            class="publication"
+            class="publication publication-highlight"
             data-author-rank="1"
             data-tags="3d-generation"
             data-title="GaussianAnything"
             data-year="2025"
           >
             <div class="publication-media">
-              <video autoplay loop muted playsinline preload="metadata">
-                <source src="images/GA/GaussianAnything.mp4" type="video/mp4">
+              <video loop muted playsinline preload="none" poster="images/posters/gaussiananything.jpg">
+                <source src="images/GA/GaussianAnything-thumb.mp4" type="video/mp4">
               </video>
             </div>
             <div class="publication-content">
@@ -722,7 +732,7 @@
             data-year="2025"
           >
             <div class="publication-media">
-              <video autoplay loop muted playsinline preload="metadata">
+              <video loop muted playsinline preload="none" poster="images/posters/artilatent.jpg">
                 <source
                   src="https://xingangpan.github.io/picture/ArtiLatent.mp4"
                   type="video/mp4"
@@ -743,7 +753,11 @@
                 <a href="https://xingangpan.github.io/">Xingang Pan</a>
               </p>
               <p class="meta"><em>SIGGRAPH Asia</em>, 2025</p>
-              <p>ArtiLatent generates articulated 3D objects.</p>
+              <!-- Was: ArtiLatent generates articulated 3D objects. -->
+              <p>
+                ArtiLatent generates articulated 3D objects with fine-grained geometry,
+                accurate articulation, and realistic appearance via structured latents.
+              </p>
               <p class="links">
                 <a href="https://chenhonghua.github.io/MyProjects/ArtiLatent/">
                   project page
@@ -759,14 +773,14 @@
           </article>
 
           <article
-            class="publication"
+            class="publication publication-highlight"
             data-author-rank="2"
-            data-tags="world-models spatial-intelligence"
+            data-tags="world-models video-generation spatial-intelligence"
             data-title="WorldMem"
             data-year="2025"
           >
             <div class="publication-media">
-              <video autoplay loop muted playsinline preload="metadata">
+              <video loop muted playsinline preload="none" poster="images/posters/worldmem.jpg">
                 <source src="https://xizaoqu.github.io/images/worldmem.mp4" type="video/mp4">
               </video>
             </div>
@@ -806,16 +820,16 @@
           <article
             class="publication"
             data-author-rank="2"
-            data-tags="spatial-intelligence"
+            data-tags="video-generation spatial-intelligence"
+            data-month="4"
             data-title="ObjCtrl-2.5D"
-            data-year="2025"
+            data-year="2026"
           >
             <div class="publication-media">
-              <img
-                src="https://wzhouxiff.github.io/projects/ObjCtrl-2.5D/assets/results/traj/rose_swing_demo_0_0.9_0.5_rescale2_k5_trajectory.gif"
-                alt="ObjCtrl-2.5D result"
-                loading="lazy"
-              >
+              <!-- Was hotlinked GIF: https://wzhouxiff.github.io/projects/ObjCtrl-2.5D/assets/results/traj/rose_swing_demo_0_0.9_0.5_rescale2_k5_trajectory.gif -->
+              <video loop muted playsinline preload="none" poster="images/posters/objctrl.jpg" aria-label="ObjCtrl-2.5D result">
+                <source src="images/thumbs/objctrl.mp4" type="video/mp4">
+              </video>
             </div>
             <div class="publication-content">
               <h3>
@@ -829,7 +843,8 @@
                 <a href="https://shangchenzhou.com/">Shangchen Zhou</a>,
                 <a href="https://www.mmlab-ntu.com/person/ccloy/">Chen Change Loy</a>
               </p>
-              <p class="meta"><em>IJCV</em>, 2025</p>
+              <!-- Previously: IJCV, 2025. -->
+              <p class="meta"><em>IJCV</em>, 2026</p>
               <p>
                 ObjCtrl-2.5D enables training-free object control in image-to-video
                 generation using depth and camera trajectories.
@@ -844,6 +859,8 @@
                 <a href="https://github.com/wzhouxiff/ObjCtrl-2.5D">code</a>
                 <span>/</span>
                 <a href="https://huggingface.co/spaces/yslan/ObjCtrl-2.5D">demo</a>
+                <span>/</span>
+                <a class="bibtex-link" href="data/bib/objctrl25d.bib">bibtex</a>
               </p>
             </div>
           </article>
@@ -856,11 +873,10 @@
             data-year="2025"
           >
             <div class="publication-media">
-              <img
-                src="https://songlin1998.github.io/images/publications/morphing.gif"
-                alt="Textured 3D Regenerative Morphing preview"
-                loading="lazy"
-              >
+              <!-- Was hotlinked GIF: https://songlin1998.github.io/images/publications/morphing.gif -->
+              <video loop muted playsinline preload="none" poster="images/posters/morphing.jpg" aria-label="Textured 3D Regenerative Morphing preview">
+                <source src="images/thumbs/morphing.mp4" type="video/mp4">
+              </video>
             </div>
             <div class="publication-content">
               <h3>
@@ -869,15 +885,16 @@
                 </a>
               </h3>
               <p class="meta">
-                <a href="https://shangchenzhou.com/">Songlin Yang</a>,
+                <a href="https://songlin1998.github.io/">Songlin Yang</a>,
                 <strong>Yushi Lan</strong>,
                 <a href="https://chenhonghua.github.io/clay.github.io/">Honghua Chen</a>,
                 <a href="https://xingangpan.github.io/">Xingang Pan</a>
               </p>
               <p class="meta"><em>ICCV</em>, 2025</p>
+              <!-- Was: A 3D diffusion prior enables textured regenerative morphing for 3D shapes. -->
               <p>
-                A 3D diffusion prior enables textured regenerative morphing for 3D
-                shapes.
+                Textured 3D Regenerative Morphing uses a 3D diffusion prior to create
+                smooth, plausible morphing sequences between textured 3D objects.
               </p>
               <p class="links">
                 <a href="https://songlin1998.github.io/Textured-3D-Morphing/">
@@ -903,7 +920,7 @@
             data-year="2025"
           >
             <div class="publication-media">
-              <video autoplay loop muted playsinline preload="metadata">
+              <video loop muted playsinline preload="none" poster="images/posters/sar3d.jpg">
                 <source
                   src="https://xingangpan.github.io/picture/SAR3D.mp4"
                   type="video/mp4"
@@ -932,7 +949,7 @@
               <p class="links">
                 <a href="https://cyw-3d.github.io/projects/SAR3D/">project page</a>
                 <span>/</span>
-                <a href="https://arxiv.org/pdf/2411.16856">pdf</a>
+                <a href="https://arxiv.org/pdf/2411.16856">arXiv</a>
                 <span>/</span>
                 <a href="https://github.com/cyw-3d/SAR3D">code</a>
                 <span>/</span>
@@ -951,11 +968,10 @@
             data-year="2025"
           >
             <div class="publication-media">
-              <img
-                src="https://shangchenzhou.com/assets/img/papers/3DEnhancer.gif"
-                alt="3DEnhancer preview"
-                loading="lazy"
-              >
+              <!-- Was hotlinked GIF: https://shangchenzhou.com/assets/img/papers/3DEnhancer.gif -->
+              <video loop muted playsinline preload="none" poster="images/posters/3denhancer.jpg" aria-label="3DEnhancer preview">
+                <source src="images/thumbs/3denhancer.mp4" type="video/mp4">
+              </video>
             </div>
             <div class="publication-content">
               <h3>
@@ -997,11 +1013,10 @@
             data-year="2025"
           >
             <div class="publication-media">
-              <img
-                src="https://frozenburning.github.io/images/3dtopia-xl.gif"
-                alt="3DTopia-XL preview"
-                loading="lazy"
-              >
+              <!-- Was hotlinked GIF: https://frozenburning.github.io/images/3dtopia-xl.gif -->
+              <video loop muted playsinline preload="none" poster="images/posters/3dtopia-xl.jpg" aria-label="3DTopia-XL preview">
+                <source src="images/thumbs/3dtopia-xl.mp4" type="video/mp4">
+              </video>
             </div>
             <div class="publication-content">
               <h3>
@@ -1036,19 +1051,21 @@
                 <a href="https://arxiv.org/abs/2409.12957">arXiv</a>
                 <span>/</span>
                 <a href="https://github.com/3DTopia/3DTopia-XL">code</a>
+                <span>/</span>
+                <a class="bibtex-link" href="data/bib/3dtopiaxl.bib">bibtex</a>
               </p>
             </div>
           </article>
 
           <article
-            class="publication"
+            class="publication publication-highlight"
             data-author-rank="1"
             data-tags="3d-generation"
             data-title="LN3Diff"
             data-year="2024"
           >
             <div class="publication-media">
-              <video autoplay loop muted playsinline preload="metadata">
+              <video loop muted playsinline preload="none" poster="images/posters/ln3diff.jpg">
                 <source src="images/ln3diff/ln3diff-teaser.mp4" type="video/mp4">
               </video>
             </div>
@@ -1069,7 +1086,8 @@
                 <a href="https://xingangpan.github.io/">Xingang Pan</a>,
                 <a href="https://www.mmlab-ntu.com/person/ccloy/">Chen Change Loy</a>
               </p>
-              <p class="meta"><em>ECCV</em>, 2024</p>
+              <!-- Previously: ECCV, 2024 only. LN3Diff++ is the TPAMI extension. -->
+              <p class="meta"><em>ECCV</em>, 2024; <em>TPAMI</em>, 2026</p>
               <p>
                 LN3Diff creates high-quality 3D meshes from image or text within
                 seconds.
@@ -1093,7 +1111,7 @@
           <article
             class="publication"
             data-author-rank="1"
-            data-tags="3d-generation 3d-avatars"
+            data-tags="3d-generation"
             data-title="Gaussian3Diff"
             data-year="2024"
           >
@@ -1144,7 +1162,7 @@
           <article
             class="publication"
             data-author-rank="2"
-            data-tags="3d-avatars 3d-generation 3d-correspondence"
+            data-tags="3d-generation 3d-correspondence"
             data-title="DeformToon3D"
             data-year="2023"
           >
@@ -1172,9 +1190,10 @@
                 <a href="https://www.mmlab-ntu.com/person/ccloy/">Chen Change Loy</a>
               </p>
               <p class="meta"><em>ICCV</em>, 2023</p>
+              <!-- Was: DeformToon3D achieves high-quality geometry and texture stylization under given styles. -->
               <p>
-                DeformToon3D achieves high-quality geometry and texture stylization
-                under given styles.
+                DeformToon3D decomposes 3D toonification into geometry deformation and
+                texture stylization on a pre-trained 3D GAN.
               </p>
               <p class="links">
                 <a href="https://www.mmlab-ntu.com/project/deformtoon3d/">project page</a>
@@ -1197,7 +1216,6 @@
           >
             <div class="publication-media">
               <video
-                autoplay
                 loop
                 muted
                 playsinline
@@ -1251,16 +1269,15 @@
           <article
             class="publication"
             data-author-rank="3"
-            data-tags="3d-avatars 3d-generation"
+            data-tags="3d-generation"
             data-title="EVA3D"
             data-year="2023"
           >
             <div class="publication-media">
-              <img
-                src="images/eva3d.gif"
-                alt="EVA3D teaser"
-                loading="lazy"
-              >
+              <!-- images/eva3d.gif (2.5MB) re-encoded to images/eva3d.mp4 (0.1MB). -->
+              <video loop muted playsinline preload="none" poster="images/posters/eva3d.jpg">
+                <source src="images/eva3d.mp4" type="video/mp4">
+              </video>
             </div>
             <div class="publication-content">
               <h3>
@@ -1295,15 +1312,16 @@
           </article>
 
           <article
-            class="publication"
+            class="publication publication-highlight"
             data-author-rank="1"
             data-tags="3d-correspondence"
+            data-month="3"
             data-title="DDF"
-            data-year="2022"
+            data-year="2024"
           >
             <div class="publication-media">
               <img
-                src="images/DDF/teaser.png"
+                src="images/DDF/teaser-thumb.jpg"
                 alt="DDF teaser"
                 loading="lazy"
               >
@@ -1319,7 +1337,8 @@
                 <a href="https://www.mmlab-ntu.com/person/ccloy/">Chen Change Loy</a>,
                 <a href="https://daibo.info/">Bo Dai</a>
               </p>
-              <p class="meta"><em>IJCV</em>, 2022</p>
+              <!-- Previously: IJCV, 2022. -->
+              <p class="meta"><em>IJCV</em>, 2024</p>
               <p>
                 DDF studies dense correspondence in NeRF-based GANs and distills it
                 without supervision.
@@ -1336,10 +1355,10 @@
             </div>
           </article>
 
+          <!-- Magnifier intentionally has no data-tags (was spatial-intelligence); shown only under All. -->
           <article
             class="publication"
             data-author-rank="1"
-            data-tags="spatial-intelligence"
             data-title="Magnifier"
             data-year="2020"
           >
@@ -1375,6 +1394,8 @@
                 <a href="https://arxiv.org/abs/2002.10979">arXiv</a>
                 <span>/</span>
                 <a href="https://github.com/NIRVANALAN/magnifiernet_reid">code</a>
+                <span>/</span>
+                <a class="bibtex-link" href="data/bib/magnifier.bib">bibtex</a>
               </p>
             </div>
           </article>
@@ -1386,6 +1407,10 @@
         <div class="section-header">
           <h2>Academic Services</h2>
         </div>
+        <p>
+          <strong>Workshop Host:</strong>
+          <a href="https://phys-ai-workshop.github.io/eccv26/">PhysAI @ ECCV 2026</a>
+        </p>
         <p>
           <strong>Conference Reviewer:</strong>
           CVPR'21-26, ICCV'23/25, ECCV'24/26, NeurIPS'22-25, ICLR'24-26,
@@ -1592,10 +1617,11 @@
         const links = document.querySelectorAll(".bibtex-link");
         const publicationTagLabels = {
           "world-models": "World Models",
+          "video-generation": "Video Generation",
           "3d-generation": "3D Generation",
           "3d-4d-reconstruction": "3D/4D Reconstruction",
           "spatial-intelligence": "Spatial Intelligence",
-          "3d-avatars": "3D Avatars",
+          // "3d-avatars": "3D Avatars", (merged into 3D Generation)
           "3d-correspondence": "3D Correspondence",
         };
 
@@ -1720,8 +1746,23 @@
           });
         });
 
-        renderPublicationTags();
+        // Tag pills hidden for a cleaner list; the filters above still use data-tags.
+        // renderPublicationTags();
         applyPublicationFilter("all");
+
+        // Videos have no autoplay: each one downloads and plays only near the viewport.
+        const videoObserver = new IntersectionObserver((entries) => {
+          entries.forEach(({ target, isIntersecting }) => {
+            if (isIntersecting) {
+              target.play().catch(() => {});
+            } else {
+              target.pause();
+            }
+          });
+        }, { rootMargin: "300px" });
+        document.querySelectorAll(".publication-media video").forEach((video) => {
+          videoObserver.observe(video);
+        });
 
         function closeOtherPanels(activePanel) {
           document.querySelectorAll(".bibtex-panel.is-open").forEach((panel) => {
