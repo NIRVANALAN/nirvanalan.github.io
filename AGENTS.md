@@ -24,8 +24,9 @@
   3. `data-title` ascending
 - For `Conference and Journal Papers`, use `data-sort-strategy="year-author-rank"` on the wrapper so papers sort by:
   1. `data-year` descending
-  2. `data-author-rank` ascending
-  3. `data-title` ascending
+  2. `data-month` descending (conference month, e.g. NeurIPS=12, ECCV=9, ICML=7, CVPR=6, ICLR=4; optional, defaults to 0)
+  3. `data-author-rank` ascending
+  4. `data-title` ascending
 - When adding or editing a selected publication, always set:
   - `data-year`
   - `data-author-rank`

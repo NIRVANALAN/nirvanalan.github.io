@@ -100,6 +100,16 @@
         <div class="news-scroll">
         <ul class="news-list">
           <li>
+            <span class="news-date">[2026-09]</span>
+            <span>
+              Two papers
+              <a href="https://nirvanalan.github.io/projects/holo4d/">Holo4D</a>
+              and
+              <a href="https://yimingc9.github.io/physiformer/">PhysiFormer</a>
+              accepted to NeurIPS 2026.
+            </span>
+          </li>
+          <li>
             <span class="news-date">[2026-06]</span>
             <span>
               We are organizing
@@ -304,14 +314,65 @@
         </p>
 
         <div class="publication-list">
-          <!-- Preprint Papers section hidden after Syn4D moved to Conference and Journal Papers. -->
-          <h3 class="publication-subtitle">Preprint Papers</h3>
-
+          <!-- Preprint Papers section hidden after PhysiFormer moved to Conference and Journal Papers (NeurIPS 2026). -->
+          <!-- <h3 class="publication-subtitle">Preprint Papers</h3>
           <div class="publication-group" data-sort-strategy="author-rank-year">
+          </div> -->
+
+          <h3 class="publication-subtitle">Conference and Journal Papers</h3>
+
+          <div class="publication-group" data-sort-strategy="year-author-rank">
+          <article
+            class="publication"
+            data-author-rank="1"
+            data-tags="world-models 3d-4d-reconstruction"
+            data-month="12"
+            data-title="Holo4D"
+            data-year="2026"
+          >
+            <div class="publication-media">
+              <video autoplay loop muted playsinline preload="metadata">
+                <source src="images/holo4d/holo4d-thumb.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="publication-content">
+              <h3>
+                <a href="https://nirvanalan.github.io/projects/holo4d/">
+                  Holo4D: Holistic 4D Reconstruction as Geometric Control for
+                  Video Diffusion
+                </a>
+              </h3>
+              <p class="meta">
+                <strong>Yushi Lan*</strong>,
+                <a href="https://jzr99.github.io/">Zeren Jiang*</a>,
+                <a href="https://kmcode1.github.io/">Koichi Namekata</a>,
+                <a href="https://xingangpan.github.io/">Xingang Pan</a>,
+                <a href="https://chuanxiaz.com/">Chuanxia Zheng</a>,
+                <a href="https://www.robots.ox.ac.uk/~vedaldi/">Andrea Vedaldi</a>
+              </p>
+              <p class="meta"><em>NeurIPS</em>, 2026</p>
+              <p>
+                Holo4D reshoots a video along new camera paths, using reconstructed
+                persistent 3D tracks as a <em>scaffold</em> to tame a pretrained video
+                diffusion model.
+              </p>
+              <p class="links">
+                <a href="https://nirvanalan.github.io/projects/holo4d/">project page</a>
+                <span>/</span>
+                <a href="https://arxiv.org/abs/2610.25276">arXiv</a>
+                <span>/</span>
+                <a href="https://github.com/NIRVANALAN/Holo4D">code</a>
+                <span>/</span>
+                <a class="bibtex-link" href="data/bib/holo4d.bib">bibtex</a>
+              </p>
+            </div>
+          </article>
+
           <article
             class="publication publication-after-subtitle"
             data-author-rank="2"
-            data-tags="world-models spatial-intelligence 3d-4d-reconstruction Dataset"
+            data-tags="world-models spatial-intelligence"
+            data-month="12"
             data-title="PhysiFormer"
             data-year="2026"
           >
@@ -334,7 +395,8 @@
                 <strong>Yushi Lan</strong>,
                 <a href="https://www.robots.ox.ac.uk/~vedaldi/people.html">Andrea Vedaldi</a>
               </p>
-              <p class="meta"><em>arXiv</em>, 2026</p>
+              <!-- Previously listed as arXiv, 2026. -->
+              <p class="meta"><em>NeurIPS</em>, 2026</p>
               <p>
                 PhysiFormer learns physically plausible 4D mesh dynamics in world
                 coordinates for multi-object, multi-material simulation.
@@ -352,16 +414,13 @@
               </p>
             </div>
           </article>
-          </div>
 
-          <h3 class="publication-subtitle">Conference and Journal Papers</h3>
-
-          <div class="publication-group" data-sort-strategy="year-author-rank">
           <!-- Syn4D is co-first authored and featured before STream3R in the 2026 list. -->
           <article
             class="publication publication-after-subtitle"
             data-author-rank="0"
             data-tags="spatial-intelligence 3d-4d-reconstruction Dataset"
+            data-month="9"
             data-title="Syn4D"
             data-year="2026"
           >
@@ -415,6 +474,7 @@
             class="publication publication-after-subtitle"
             data-author-rank="3"
             data-tags="3d-4d-reconstruction 3d-correspondence"
+            data-month="7"
             data-title="4RC"
             data-year="2026"
           >
@@ -462,6 +522,7 @@
             class="publication"
             data-author-rank="2"
             data-tags="world-models"
+            data-month="7"
             data-title="VFMF"
             data-year="2026"
           >
@@ -504,6 +565,7 @@
             class="publication"
             data-author-rank="4"
             data-tags="spatial-intelligence world-models"
+            data-month="6"
             data-title="Video4Spatial"
             data-year="2026"
           >
@@ -553,6 +615,7 @@
             class="publication"
             data-author-rank="1"
             data-tags="3d-4d-reconstruction"
+            data-month="4"
             data-title="STream3R"
             data-year="2026"
           >
@@ -1583,6 +1646,12 @@
 
           if (yearA !== yearB) {
             return yearB - yearA;
+          }
+          // Within a year, newer venues first (data-month = conference month).
+          const monthA = Number(a.dataset.month || "0");
+          const monthB = Number(b.dataset.month || "0");
+          if (monthA !== monthB) {
+            return monthB - monthA;
           }
           if (authorRankA !== authorRankB) {
             return authorRankA - authorRankB;
