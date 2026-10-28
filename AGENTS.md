@@ -27,6 +27,7 @@
   2. `data-month` descending (conference month, e.g. NeurIPS=12, ECCV=9, ICML=7, CVPR=6, ICLR=4; optional, defaults to 0)
   3. `data-author-rank` ascending
   4. `data-title` ascending
+- Optional `data-priority` (higher first) overrides both strategies to pin a featured item, e.g. Mundo above SceneConductor.
 - When adding or editing a selected publication, always set:
   - `data-year`
   - `data-author-rank`
@@ -37,15 +38,15 @@
   - `world-models`
   - `video-generation`
   - `3d-generation`
-  - `3d-4d-reconstruction`
+  - `agentic-3d`
   - `spatial-intelligence`
   - `3d-correspondence`
-- `3d-avatars` was merged into `3d-generation`; do not reintroduce it.
+- `3d-avatars` was merged into `3d-generation`, and `3d-4d-reconstruction` into `spatial-intelligence`; do not reintroduce them.
 - Topic/filter order should remain:
   1. `world-models`
-  2. `video-generation`
-  3. `spatial-intelligence`
-  4. `3d-4d-reconstruction`
+  2. `agentic-3d`
+  3. `video-generation`
+  4. `spatial-intelligence`
   5. `3d-generation`
   6. `3d-correspondence`
   7. `preprints`

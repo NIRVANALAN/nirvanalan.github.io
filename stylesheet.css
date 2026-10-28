@@ -246,6 +246,12 @@ p {
   margin: 0 0 8px;
 }
 
+/* Author names never break across lines (e.g. "Yuanming / Hu"). */
+.publication-content .meta a,
+.publication-content .meta strong {
+  white-space: nowrap;
+}
+
 .publication-tags {
   display: flex;
   flex-wrap: wrap;

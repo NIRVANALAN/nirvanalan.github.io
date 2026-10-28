@@ -15,7 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;display=swap"
       rel="stylesheet"
     >
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="stylesheet.css?v=2026-10-28"> <!-- bump ?v= when the CSS changes, so browsers refetch it -->
     <link
       rel="icon"
       href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>"
@@ -106,6 +106,14 @@
         </div>
         <div class="news-scroll">
         <ul class="news-list">
+          <li>
+            <span class="news-date">[2026-10]</span>
+            <span>
+              We released <a href="https://mundo-world-model.github.io/">Mundo</a>, a
+              customized world model that turns your environment into a programmable
+              world.
+            </span>
+          </li>
           <li>
             <span class="news-date">[2026-09]</span>
             <span>
@@ -297,6 +305,10 @@
             World Models
           </a>
           <span>|</span>
+          <a class="publication-filter" href="#publications" data-filter="agentic-3d">
+            Agentic 3D
+          </a>
+          <span>|</span>
           <a class="publication-filter" href="#publications" data-filter="video-generation">
             Video Generation
           </a>
@@ -305,12 +317,14 @@
             Spatial Intelligence
           </a>
           <span>|</span>
+          <!-- 3D/4D Reconstruction merged into Spatial Intelligence.
           <a class="publication-filter" href="#publications" data-filter="3d-4d-reconstruction">
             3D/4D Reconstruction
           </a>
           <span>|</span>
+          -->
           <a class="publication-filter" href="#publications" data-filter="3d-generation">
-            3D Generation
+            3D/4D Generation
           </a>
           <span>|</span>
           <!-- 3D Avatars merged into 3D Generation.
@@ -329,6 +343,113 @@
           <!-- <h3 class="publication-subtitle">Preprint Papers</h3>
           <div class="publication-group" data-sort-strategy="author-rank-year">
           </div> -->
+          <!-- Restored for SceneConductor (preprint) and Mundo (research project, not a paper). -->
+          <h3 class="publication-subtitle">Preprints and Research Projects</h3>
+
+          <div class="publication-group" data-sort-strategy="author-rank-year">
+          <article
+            class="publication"
+            data-author-rank="2"
+            data-tags="agentic-3d 3d-generation"
+            data-title="SceneConductor"
+            data-year="2026"
+          >
+            <div class="publication-media">
+              <video loop muted playsinline preload="none" poster="https://jhkim0759.github.io/assets/thumbs/sceneconductor.jpg" aria-label="SceneConductor demo">
+                <source src="https://jhkim0759.github.io/assets/thumbs/sceneconductor.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="publication-content">
+              <h3>
+                <a href="https://jhkim0759.github.io/projects/SceneConductor/">
+                  Don't Ask Agents to Do Everything: Selective Agentic Reasoning for
+                  Single Image to 3D Scene Generation
+                </a>
+              </h3>
+              <p class="meta">
+                <a href="https://jhkim0759.github.io/">Jeonghwan&nbsp;Kim</a>,
+                <strong>Yushi&nbsp;Lan</strong>,
+                <a href="https://cyw-3d.github.io/">Yongwei&nbsp;Chen</a>,
+                <a href="https://hieu1999210.github.io/">Hieu&nbsp;Trung&nbsp;Nguyen</a>,
+                <a href="https://pptrick.github.io/">Chuanyu&nbsp;Pan</a>,
+                <a href="https://yuanming.taichi.graphics/">Yuanming&nbsp;Hu</a>,
+                <a href="https://xingangpan.github.io/">Xingang&nbsp;Pan</a>
+              </p>
+              <p class="meta"><em>arXiv</em>, 2026</p>
+              <!-- Was: SceneConductor turns a single photo into a full 3D scene: geometry proposes edits, agents only accept or reject them against the photo. -->
+              <p>
+                SceneConductor is a harness framework for agentic 3D scene
+                reconstruction that turns an open-source model (Qwen 27B) into a
+                comprehensive 3D scene reconstructor.
+              </p>
+              <p class="links">
+                <a href="https://jhkim0759.github.io/projects/SceneConductor/">project page</a>
+                <span>/</span>
+                <a href="https://arxiv.org/abs/2606.08402">arXiv</a>
+                <span>/</span>
+                <a href="https://github.com/jhkim0759/SceneConductor">code</a>
+                <span>/</span>
+                <a class="bibtex-link" href="data/bib/sceneconductor.bib">bibtex</a>
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="publication"
+            data-author-rank="4"
+            data-priority="1"
+            data-tags="world-models agentic-3d spatial-intelligence"
+            data-title="Mundo"
+            data-year="2026"
+          >
+            <div class="publication-media">
+              <!-- From https://yihangluo.com/assets/publications/Mundo.gif (9MB), re-encoded. -->
+              <video loop muted playsinline preload="none" poster="images/posters/mundo.jpg" aria-label="Mundo teaser">
+                <source src="images/thumbs/mundo.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="publication-content">
+              <h3>
+                <a href="https://mundo-world-model.github.io/">
+                  Mundo: Customized World Model
+                </a>
+              </h3>
+              <p class="meta">
+                <a href="https://yihangluo.com/">Yihang&nbsp;Luo</a>,
+                <a href="https://kkakkkka.github.io/">Zunnan&nbsp;Xu</a>,
+                <a href="https://shangchenzhou.com/">Shangchen&nbsp;Zhou</a>,
+                <strong>Yushi&nbsp;Lan</strong>,
+                <a href="https://kangliao929.github.io/">Kang&nbsp;Liao</a>,
+                <a class="more-authors-toggle" href="#">7&nbsp;more&nbsp;authors</a><span class="more-authors" hidden>
+                <a href="https://scholar.google.com/citations?user=sjiwhzcAAAAJ">Zerui&nbsp;Gong</a>,
+                <a href="https://dravenalg.github.io/">Xiaoming&nbsp;Wu</a>,
+                <a href="https://scholar.google.com/citations?user=fMXnSGMAAAAJ">Qingyi&nbsp;Tao</a>,
+                <a href="https://wu-zhonghua.github.io/">Zhonghua&nbsp;Wu</a>,
+                Bixuan&nbsp;Jin,
+                <a href="https://scholar.google.com/citations?user=ljt16JkAAAAJ">Fei&nbsp;Wang</a>,
+                <a href="https://zhihou7.github.io/">Zhi&nbsp;Hou</a></span>,
+                <a href="https://www.ee.cuhk.edu.hk/~xgwang/">Xiaogang&nbsp;Wang</a>,
+                <a href="https://xingangpan.github.io/">Xingang&nbsp;Pan</a>,
+                <a href="https://www.mmlab-ntu.com/person/ccloy/">Chen&nbsp;Change&nbsp;Loy</a>
+              </p>
+              <p class="meta"><em>Research Project</em>, 2026</p>
+              <!-- Was: Mundo builds an interactive 3D world from a few context images, using a 3D proxy, a physics-based scene program, and a video model. -->
+              <p>
+                Mundo turns context images into editable 3D worlds for camera
+                exploration, simulation, and robot planning.
+              </p>
+              <p class="links">
+                <a href="https://mundo-world-model.github.io/">project page</a>
+                <span>/</span>
+                <a href="https://huggingface.co/blog/Luo-Yihang/mundo-world-model">blog</a>
+                <span>/</span>
+                <a href="https://github.com/Luo-Yihang/Mundo">code</a>
+                <span>/</span>
+                <a class="bibtex-link" href="data/bib/mundo.bib">bibtex</a>
+              </p>
+            </div>
+          </article>
+          </div>
 
           <h3 class="publication-subtitle">Conference and Journal Papers</h3>
 
@@ -336,7 +457,7 @@
           <article
             class="publication publication-highlight"
             data-author-rank="1"
-            data-tags="video-generation spatial-intelligence 3d-4d-reconstruction"
+            data-tags="video-generation spatial-intelligence"
             data-month="12"
             data-title="Holo4D"
             data-year="2026"
@@ -354,12 +475,12 @@
                 </a>
               </h3>
               <p class="meta">
-                <strong>Yushi Lan*</strong>,
-                <a href="https://jzr99.github.io/">Zeren Jiang*</a>,
-                <a href="https://kmcode1.github.io/">Koichi Namekata</a>,
-                <a href="https://xingangpan.github.io/">Xingang Pan</a>,
-                <a href="https://chuanxiaz.com/">Chuanxia Zheng</a>,
-                <a href="https://www.robots.ox.ac.uk/~vedaldi/">Andrea Vedaldi</a>
+                <strong>Yushi&nbsp;Lan*</strong>,
+                <a href="https://jzr99.github.io/">Zeren&nbsp;Jiang*</a>,
+                <a href="https://kmcode1.github.io/">Koichi&nbsp;Namekata</a>,
+                <a href="https://xingangpan.github.io/">Xingang&nbsp;Pan</a>,
+                <a href="https://chuanxiaz.com/">Chuanxia&nbsp;Zheng</a>,
+                <a href="https://www.robots.ox.ac.uk/~vedaldi/">Andrea&nbsp;Vedaldi</a>
               </p>
               <p class="meta"><em>NeurIPS</em>, 2026</p>
               <p>
@@ -382,7 +503,7 @@
           <article
             class="publication publication-after-subtitle"
             data-author-rank="2"
-            data-tags="world-models spatial-intelligence"
+            data-tags="world-models"
             data-month="12"
             data-title="PhysiFormer"
             data-year="2026"
@@ -402,9 +523,9 @@
                 </a>
               </h3>
               <p class="meta">
-                <a href="https://yimingc9.github.io/">Yiming Chen</a>,
-                <strong>Yushi Lan</strong>,
-                <a href="https://www.robots.ox.ac.uk/~vedaldi/people.html">Andrea Vedaldi</a>
+                <a href="https://yimingc9.github.io/">Yiming&nbsp;Chen</a>,
+                <strong>Yushi&nbsp;Lan</strong>,
+                <a href="https://www.robots.ox.ac.uk/~vedaldi/people.html">Andrea&nbsp;Vedaldi</a>
               </p>
               <!-- Previously listed as arXiv, 2026. -->
               <p class="meta"><em>NeurIPS</em>, 2026</p>
@@ -430,7 +551,7 @@
           <article
             class="publication publication-after-subtitle publication-highlight"
             data-author-rank="0"
-            data-tags="spatial-intelligence 3d-4d-reconstruction Dataset"
+            data-tags="spatial-intelligence Dataset"
             data-month="9"
             data-title="Syn4D"
             data-year="2026"
@@ -449,17 +570,17 @@
                 </a>
               </h3>
               <p class="meta">
-                <a href="https://jzr99.github.io/">Zeren Jiang*</a>,
-                <strong>Yushi Lan*</strong>,
-                <a href="https://yihangluo.com/">Yihang Luo</a>,
-                <a href="https://yufandeng.com/">Yufan Deng</a>,
-                <a href="https://scholar.google.com/citations?user=31eXgMYAAAAJ&amp;hl=en">Zihang Lai</a>,
-                <a href="https://edgarsucar.github.io/">Edgar Sucar</a>,
-                <a href="https://chrirupp.github.io/">Christian Rupprecht</a>,
-                <a href="https://eng.ox.ac.uk/people/iro-laina/">Iro Laina</a>,
-                <a href="https://dlarlus.github.io/">Diane Larlus</a>,
-                <a href="https://chuanxiaz.com/">Chuanxia Zheng</a>,
-                <a href="https://www.robots.ox.ac.uk/~vedaldi/">Andrea Vedaldi</a>
+                <a href="https://jzr99.github.io/">Zeren&nbsp;Jiang*</a>,
+                <strong>Yushi&nbsp;Lan*</strong>,
+                <a href="https://yihangluo.com/">Yihang&nbsp;Luo</a>,
+                <a href="https://yufandeng.com/">Yufan&nbsp;Deng</a>,
+                <a href="https://scholar.google.com/citations?user=31eXgMYAAAAJ&amp;hl=en">Zihang&nbsp;Lai</a>,
+                <a href="https://edgarsucar.github.io/">Edgar&nbsp;Sucar</a>,
+                <a href="https://chrirupp.github.io/">Christian&nbsp;Rupprecht</a>,
+                <a href="https://eng.ox.ac.uk/people/iro-laina/">Iro&nbsp;Laina</a>,
+                <a href="https://dlarlus.github.io/">Diane&nbsp;Larlus</a>,
+                <a href="https://chuanxiaz.com/">Chuanxia&nbsp;Zheng</a>,
+                <a href="https://www.robots.ox.ac.uk/~vedaldi/">Andrea&nbsp;Vedaldi</a>
               </p>
               <!-- Previously listed as arXiv, 2026. -->
               <p class="meta"><em>ECCV</em>, 2026</p>
@@ -484,7 +605,7 @@
           <article
             class="publication publication-after-subtitle publication-highlight"
             data-author-rank="3"
-            data-tags="3d-4d-reconstruction 3d-correspondence"
+            data-tags="spatial-intelligence 3d-correspondence"
             data-month="7"
             data-title="4RC"
             data-year="2026"
@@ -502,11 +623,11 @@
                 </a>
               </h3>
               <p class="meta">
-                <a href="https://yihangluo.com/">Yihang Luo</a>,
-                <a href="https://shangchenzhou.com/">Shangchen Zhou</a>,
-                <strong>Yushi Lan</strong>,
-                <a href="https://xingangpan.github.io/">Xingang Pan</a>,
-                <a href="https://www.mmlab-ntu.com/person/ccloy/">Chen Change Loy</a>
+                <a href="https://yihangluo.com/">Yihang&nbsp;Luo</a>,
+                <a href="https://shangchenzhou.com/">Shangchen&nbsp;Zhou</a>,
+                <strong>Yushi&nbsp;Lan</strong>,
+                <a href="https://xingangpan.github.io/">Xingang&nbsp;Pan</a>,
+                <a href="https://www.mmlab-ntu.com/person/ccloy/">Chen&nbsp;Change&nbsp;Loy</a>
               </p>
               <!-- Previously listed as arXiv, 2026. -->
               <p class="meta"><em>ICML</em>, 2026</p>
@@ -548,10 +669,10 @@
                 </a>
               </h3>
               <p class="meta">
-                <a href="https://gabrijel-boduljak.com/">Gabrijel Boduljak</a>,
-                <strong>Yushi Lan</strong>,
-                <a href="https://chrirupp.github.io/">Christian Rupprecht</a>,
-                <a href="https://www.robots.ox.ac.uk/~vedaldi/">Andrea Vedaldi</a>
+                <a href="https://gabrijel-boduljak.com/">Gabrijel&nbsp;Boduljak</a>,
+                <strong>Yushi&nbsp;Lan</strong>,
+                <a href="https://chrirupp.github.io/">Christian&nbsp;Rupprecht</a>,
+                <a href="https://www.robots.ox.ac.uk/~vedaldi/">Andrea&nbsp;Vedaldi</a>
               </p>
               <!-- Previously listed as arXiv, 2025. -->
               <p class="meta"><em>ICML</em>, 2026</p>
@@ -595,15 +716,15 @@
                 </a>
               </h3>
               <p class="meta">
-                <a href="https://xizaoqu.github.io/">Zeqi Xiao</a>,
-                <a href="https://scholar.google.com/citations?user=FiMEAdYAAAAJ&amp;hl=en">Yiwei Zhao</a>,
-                <a href="https://lingxiao.li/">Lingxiao Li</a>,
-                <strong>Yushi Lan</strong>,
-                <a href="https://ningyu1991.github.io/">Ning Yu</a>,
-                <a href="https://rahuldotgarg.appspot.com/">Rahul Garg</a>,
-                <!-- Not in the official CVPR Findings author list: <a href="https://www.linkedin.com/in/roshni-cooper/">Roshni Cooper</a>, -->
-                <a href="https://scholar.google.com/citations?user=Qpjm3JQAAAAJ&amp;hl=en">Mohammad H. Taghavi</a>,
-                <a href="https://xingangpan.github.io/">Xingang Pan</a>
+                <a href="https://xizaoqu.github.io/">Zeqi&nbsp;Xiao</a>,
+                <a href="https://scholar.google.com/citations?user=FiMEAdYAAAAJ&amp;hl=en">Yiwei&nbsp;Zhao</a>,
+                <a href="https://lingxiao.li/">Lingxiao&nbsp;Li</a>,
+                <strong>Yushi&nbsp;Lan</strong>,
+                <a href="https://ningyu1991.github.io/">Ning&nbsp;Yu</a>,
+                <a href="https://rahuldotgarg.appspot.com/">Rahul&nbsp;Garg</a>,
+                <!-- Not in the official CVPR Findings author list: <a href="https://www.linkedin.com/in/roshni-cooper/">Roshni&nbsp;Cooper</a>, -->
+                <a href="https://scholar.google.com/citations?user=Qpjm3JQAAAAJ&amp;hl=en">Mohammad&nbsp;H.&nbsp;Taghavi</a>,
+                <a href="https://xingangpan.github.io/">Xingang&nbsp;Pan</a>
               </p>
               <!-- Previously listed as arXiv, 2025. -->
               <p class="meta"><em>CVPR Findings</em>, 2026</p>
@@ -624,7 +745,7 @@
           <article
             class="publication publication-highlight"
             data-author-rank="1"
-            data-tags="3d-4d-reconstruction"
+            data-tags="spatial-intelligence"
             data-month="4"
             data-title="STream3R"
             data-year="2026"
@@ -642,16 +763,16 @@
                 </a>
               </h3>
               <p class="meta">
-                <strong>Yushi Lan*</strong>,
-                <a href="https://yihangluo.com/">Yihang Luo*</a>,
-                <a href="https://hongfz16.github.io">Fangzhou Hong</a>,
-                <a href="https://shangchenzhou.com/">Shangchen Zhou</a>,
-                <a href="https://chenhonghua.github.io/clay.github.io/">Honghua Chen</a>,
-                <a href="https://zhaoyanglyu.github.io/">Zhaoyang Lyu</a>,
-                <a href="https://williamyang1991.github.io/">Shuai Yang</a>,
-                <a href="https://daibo.info/">Bo Dai</a>,
-                <a href="https://www.mmlab-ntu.com/person/ccloy/">Chen Change Loy</a>,
-                <a href="https://xingangpan.github.io/">Xingang Pan</a>
+                <strong>Yushi&nbsp;Lan*</strong>,
+                <a href="https://yihangluo.com/">Yihang&nbsp;Luo*</a>,
+                <a href="https://hongfz16.github.io">Fangzhou&nbsp;Hong</a>,
+                <a href="https://shangchenzhou.com/">Shangchen&nbsp;Zhou</a>,
+                <a href="https://chenhonghua.github.io/clay.github.io/">Honghua&nbsp;Chen</a>,
+                <a href="https://zhaoyanglyu.github.io/">Zhaoyang&nbsp;Lyu</a>,
+                <a href="https://williamyang1991.github.io/">Shuai&nbsp;Yang</a>,
+                <a href="https://daibo.info/">Bo&nbsp;Dai</a>,
+                <a href="https://www.mmlab-ntu.com/person/ccloy/">Chen&nbsp;Change&nbsp;Loy</a>,
+                <a href="https://xingangpan.github.io/">Xingang&nbsp;Pan</a>
               </p>
               <p class="meta"><em>ICLR</em>, 2026</p>
               <p>
@@ -694,14 +815,14 @@
                 </a>
               </h3>
               <p class="meta">
-                <strong>Yushi Lan</strong>,
-                <a href="https://shangchenzhou.com/">Shangchen Zhou</a>,
-                <a href="https://zhaoyanglyu.github.io/">Zhaoyang Lyu</a>,
-                <a href="https://hongfz16.github.io">Fangzhou Hong</a>,
-                <a href="https://williamyang1991.github.io/">Shuai Yang</a>,
-                <a href="https://daibo.info/">Bo Dai</a>,
-                <a href="https://xingangpan.github.io/">Xingang Pan</a>,
-                <a href="https://www.mmlab-ntu.com/person/ccloy/">Chen Change Loy</a>
+                <strong>Yushi&nbsp;Lan</strong>,
+                <a href="https://shangchenzhou.com/">Shangchen&nbsp;Zhou</a>,
+                <a href="https://zhaoyanglyu.github.io/">Zhaoyang&nbsp;Lyu</a>,
+                <a href="https://hongfz16.github.io">Fangzhou&nbsp;Hong</a>,
+                <a href="https://williamyang1991.github.io/">Shuai&nbsp;Yang</a>,
+                <a href="https://daibo.info/">Bo&nbsp;Dai</a>,
+                <a href="https://xingangpan.github.io/">Xingang&nbsp;Pan</a>,
+                <a href="https://www.mmlab-ntu.com/person/ccloy/">Chen&nbsp;Change&nbsp;Loy</a>
               </p>
               <p class="meta"><em>ICLR</em>, 2025</p>
               <p>
@@ -747,10 +868,10 @@
                 </a>
               </h3>
               <p class="meta">
-                <a href="https://chenhonghua.github.io/clay.github.io/">Honghua Chen</a>,
-                <strong>Yushi Lan</strong>,
-                <a href="https://cyw-3d.github.io/">Yongwei Chen</a>,
-                <a href="https://xingangpan.github.io/">Xingang Pan</a>
+                <a href="https://chenhonghua.github.io/clay.github.io/">Honghua&nbsp;Chen</a>,
+                <strong>Yushi&nbsp;Lan</strong>,
+                <a href="https://cyw-3d.github.io/">Yongwei&nbsp;Chen</a>,
+                <a href="https://xingangpan.github.io/">Xingang&nbsp;Pan</a>
               </p>
               <p class="meta"><em>SIGGRAPH Asia</em>, 2025</p>
               <!-- Was: ArtiLatent generates articulated 3D objects. -->
@@ -775,7 +896,7 @@
           <article
             class="publication publication-highlight"
             data-author-rank="2"
-            data-tags="world-models video-generation spatial-intelligence"
+            data-tags="world-models video-generation"
             data-title="WorldMem"
             data-year="2025"
           >
@@ -791,13 +912,13 @@
                 </a>
               </h3>
               <p class="meta">
-                <a href="https://xizaoqu.github.io/">Zeqi Xiao</a>,
-                <strong>Yushi Lan</strong>,
-                <a href="https://zhouyifan.net/about/">Yifan Zhou</a>,
-                <a href="https://vicky0522.github.io/Wenqi-Ouyang">Wenqi Ouyang</a>,
-                <a href="https://williamyang1991.github.io/">Shuai Yang</a>,
-                <a href="https://zengyh1900.github.io/">Yanhong Zeng</a>,
-                <a href="https://xingangpan.github.io/">Xingang Pan</a>
+                <a href="https://xizaoqu.github.io/">Zeqi&nbsp;Xiao</a>,
+                <strong>Yushi&nbsp;Lan</strong>,
+                <a href="https://zhouyifan.net/about/">Yifan&nbsp;Zhou</a>,
+                <a href="https://vicky0522.github.io/Wenqi-Ouyang">Wenqi&nbsp;Ouyang</a>,
+                <a href="https://williamyang1991.github.io/">Shuai&nbsp;Yang</a>,
+                <a href="https://zengyh1900.github.io/">Yanhong&nbsp;Zeng</a>,
+                <a href="https://xingangpan.github.io/">Xingang&nbsp;Pan</a>
               </p>
               <p class="meta"><em>NeurIPS</em>, 2025</p>
               <p>WorldMem enables long-term memory for video world models.</p>
@@ -838,10 +959,10 @@
                 </a>
               </h3>
               <p class="meta">
-                <a href="https://wzhouxiff.github.io/">Zhouxia Wang</a>,
-                <strong>Yushi Lan</strong>,
-                <a href="https://shangchenzhou.com/">Shangchen Zhou</a>,
-                <a href="https://www.mmlab-ntu.com/person/ccloy/">Chen Change Loy</a>
+                <a href="https://wzhouxiff.github.io/">Zhouxia&nbsp;Wang</a>,
+                <strong>Yushi&nbsp;Lan</strong>,
+                <a href="https://shangchenzhou.com/">Shangchen&nbsp;Zhou</a>,
+                <a href="https://www.mmlab-ntu.com/person/ccloy/">Chen&nbsp;Change&nbsp;Loy</a>
               </p>
               <!-- Previously: IJCV, 2025. -->
               <p class="meta"><em>IJCV</em>, 2026</p>
@@ -885,10 +1006,10 @@
                 </a>
               </h3>
               <p class="meta">
-                <a href="https://songlin1998.github.io/">Songlin Yang</a>,
-                <strong>Yushi Lan</strong>,
-                <a href="https://chenhonghua.github.io/clay.github.io/">Honghua Chen</a>,
-                <a href="https://xingangpan.github.io/">Xingang Pan</a>
+                <a href="https://songlin1998.github.io/">Songlin&nbsp;Yang</a>,
+                <strong>Yushi&nbsp;Lan</strong>,
+                <a href="https://chenhonghua.github.io/clay.github.io/">Honghua&nbsp;Chen</a>,
+                <a href="https://xingangpan.github.io/">Xingang&nbsp;Pan</a>
               </p>
               <p class="meta"><em>ICCV</em>, 2025</p>
               <!-- Was: A 3D diffusion prior enables textured regenerative morphing for 3D shapes. -->
@@ -935,11 +1056,11 @@
                 </a>
               </h3>
               <p class="meta">
-                <a href="https://cyw-3d.github.io/">Yongwei Chen</a>,
-                <strong>Yushi Lan</strong>,
-                <a href="https://shangchenzhou.com/">Shangchen Zhou</a>,
-                <a href="https://tengfei-wang.github.io/">Tengfei Wang</a>,
-                <a href="https://xingangpan.github.io/">Xingang Pan</a>
+                <a href="https://cyw-3d.github.io/">Yongwei&nbsp;Chen</a>,
+                <strong>Yushi&nbsp;Lan</strong>,
+                <a href="https://shangchenzhou.com/">Shangchen&nbsp;Zhou</a>,
+                <a href="https://tengfei-wang.github.io/">Tengfei&nbsp;Wang</a>,
+                <a href="https://xingangpan.github.io/">Xingang&nbsp;Pan</a>
               </p>
               <p class="meta"><em>CVPR</em>, 2025</p>
               <p>
@@ -980,11 +1101,11 @@
                 </a>
               </h3>
               <p class="meta">
-                <a href="https://yihangluo.com/">Yihang Luo</a>,
-                <a href="https://shangchenzhou.com/">Shangchen Zhou</a>,
-                <strong>Yushi Lan</strong>,
-                <a href="https://xingangpan.github.io/">Xingang Pan</a>,
-                <a href="https://www.mmlab-ntu.com/person/ccloy/">Chen Change Loy</a>
+                <a href="https://yihangluo.com/">Yihang&nbsp;Luo</a>,
+                <a href="https://shangchenzhou.com/">Shangchen&nbsp;Zhou</a>,
+                <strong>Yushi&nbsp;Lan</strong>,
+                <a href="https://xingangpan.github.io/">Xingang&nbsp;Pan</a>,
+                <a href="https://www.mmlab-ntu.com/person/ccloy/">Chen&nbsp;Change&nbsp;Loy</a>
               </p>
               <p class="meta"><em>CVPR</em>, 2025</p>
               <p>
@@ -1026,19 +1147,19 @@
                 </a>
               </h3>
               <p class="meta">
-                <a href="https://frozenburning.github.io/">Zhaoxi Chen</a>,
-                <a href="https://me.kiui.moe/">Jiaxiang Tang</a>,
-                <a href="https://scholar.google.com/citations?user=kMui170AAAAJ&amp;hl=zh-CN">Yuhao Dong</a>,
-                <a href="https://ziangcao0312.github.io/">Ziang Cao</a>,
-                <a href="https://hongfz16.github.io">Fangzhou Hong</a>,
-                <strong>Yushi Lan</strong>,
-                <a href="https://tengfei-wang.github.io/">Tengfei Wang</a>,
-                <a href="https://haozhexie.com/about">Haozhe Xie</a>,
-                <a href="https://wutong16.github.io/">Tong Wu</a>,
-                <a href="https://shunsukesaito.github.io/">Shunsuke Saito</a>,
-                <a href="https://scholar.google.com/citations?user=lSDISOcAAAAJ&amp;hl=zh-CN">Liang Pan</a>,
-                <a href="http://dahua.site/">Dahua Lin</a>,
-                <a href="https://liuziwei7.github.io">Ziwei Liu</a>
+                <a href="https://frozenburning.github.io/">Zhaoxi&nbsp;Chen</a>,
+                <a href="https://me.kiui.moe/">Jiaxiang&nbsp;Tang</a>,
+                <a href="https://scholar.google.com/citations?user=kMui170AAAAJ&amp;hl=zh-CN">Yuhao&nbsp;Dong</a>,
+                <a href="https://ziangcao0312.github.io/">Ziang&nbsp;Cao</a>,
+                <a href="https://hongfz16.github.io">Fangzhou&nbsp;Hong</a>,
+                <strong>Yushi&nbsp;Lan</strong>,
+                <a href="https://tengfei-wang.github.io/">Tengfei&nbsp;Wang</a>,
+                <a href="https://haozhexie.com/about">Haozhe&nbsp;Xie</a>,
+                <a href="https://wutong16.github.io/">Tong&nbsp;Wu</a>,
+                <a href="https://shunsukesaito.github.io/">Shunsuke&nbsp;Saito</a>,
+                <a href="https://scholar.google.com/citations?user=lSDISOcAAAAJ&amp;hl=zh-CN">Liang&nbsp;Pan</a>,
+                <a href="http://dahua.site/">Dahua&nbsp;Lin</a>,
+                <a href="https://liuziwei7.github.io">Ziwei&nbsp;Liu</a>
               </p>
               <p class="meta"><em>CVPR</em>, 2025</p>
               <p>
@@ -1077,14 +1198,14 @@
                 </a>
               </h3>
               <p class="meta">
-                <strong>Yushi Lan</strong>,
-                <a href="https://hongfz16.github.io">Fangzhou Hong</a>,
-                <a href="https://williamyang1991.github.io/">Shuai Yang</a>,
-                <a href="https://shangchenzhou.com/">Shangchen Zhou</a>,
-                <a href="https://mengxuyigit.github.io/">Xuyi Meng</a>,
-                <a href="https://daibo.info/">Bo Dai</a>,
-                <a href="https://xingangpan.github.io/">Xingang Pan</a>,
-                <a href="https://www.mmlab-ntu.com/person/ccloy/">Chen Change Loy</a>
+                <strong>Yushi&nbsp;Lan</strong>,
+                <a href="https://hongfz16.github.io">Fangzhou&nbsp;Hong</a>,
+                <a href="https://williamyang1991.github.io/">Shuai&nbsp;Yang</a>,
+                <a href="https://shangchenzhou.com/">Shangchen&nbsp;Zhou</a>,
+                <a href="https://mengxuyigit.github.io/">Xuyi&nbsp;Meng</a>,
+                <a href="https://daibo.info/">Bo&nbsp;Dai</a>,
+                <a href="https://xingangpan.github.io/">Xingang&nbsp;Pan</a>,
+                <a href="https://www.mmlab-ntu.com/person/ccloy/">Chen&nbsp;Change&nbsp;Loy</a>
               </p>
               <!-- Previously: ECCV, 2024 only. LN3Diff++ is the TPAMI extension. -->
               <p class="meta"><em>ECCV</em>, 2024; <em>TPAMI</em>, 2026</p>
@@ -1130,17 +1251,17 @@
                 </a>
               </h3>
               <p class="meta">
-                <strong>Yushi Lan</strong>,
-                <a href="https://scholar.google.com/citations?hl=en&amp;user=qsrpuKIAAAAJ">Feitong Tan</a>,
-                <a href="https://sylqiu.github.io/">Di Qiu</a>,
-                <a href="https://xharlie.github.io/">Qiangeng Xu</a>,
-                <a href="https://www.kylegenova.com/">Kyle Genova</a>,
-                <a href="https://zeng.science/">Zeng Huang</a>,
-                <a href="https://www.seanfanello.it/">Sean Fanello</a>,
-                <a href="https://scholar.google.com/citations?user=lJ3VfV8AAAAJ&amp;hl=en">Rohit Pandey</a>,
-                <a href="https://www.cs.princeton.edu/~funk/">Thomas Funkhouser</a>,
-                <a href="https://www.mmlab-ntu.com/person/ccloy/">Chen Change Loy</a>,
-                <a href="https://www.zhangyinda.com/">Yinda Zhang</a>
+                <strong>Yushi&nbsp;Lan</strong>,
+                <a href="https://scholar.google.com/citations?hl=en&amp;user=qsrpuKIAAAAJ">Feitong&nbsp;Tan</a>,
+                <a href="https://sylqiu.github.io/">Di&nbsp;Qiu</a>,
+                <a href="https://xharlie.github.io/">Qiangeng&nbsp;Xu</a>,
+                <a href="https://www.kylegenova.com/">Kyle&nbsp;Genova</a>,
+                <a href="https://zeng.science/">Zeng&nbsp;Huang</a>,
+                <a href="https://www.seanfanello.it/">Sean&nbsp;Fanello</a>,
+                <a href="https://scholar.google.com/citations?user=lJ3VfV8AAAAJ&amp;hl=en">Rohit&nbsp;Pandey</a>,
+                <a href="https://www.cs.princeton.edu/~funk/">Thomas&nbsp;Funkhouser</a>,
+                <a href="https://www.mmlab-ntu.com/person/ccloy/">Chen&nbsp;Change&nbsp;Loy</a>,
+                <a href="https://www.zhangyinda.com/">Yinda&nbsp;Zhang</a>
               </p>
               <p class="meta"><em>ECCV</em>, 2024</p>
               <p>
@@ -1180,14 +1301,14 @@
                 </a>
               </h3>
               <p class="meta">
-                <a href="https://junzhezhang.github.io/">Junzhe Zhang*</a>,
-                <strong>Yushi Lan*</strong>,
-                <a href="https://williamyang1991.github.io/">Shuai Yang</a>,
-                <a href="https://hongfz16.github.io/">Fangzhou Hong</a>,
-                <a href="https://scholar.google.com/citations?user=KmxEHm4AAAAJ&amp;hl=zh-TW&amp;citsig=AMD79oqVxlhCocLzrBL2zNFZqVusRRfYow">Quan Wang</a>,
-                <a href="https://personal.ntu.edu.sg/asckyeo/">Chai Kiat Yeo</a>,
-                <a href="https://liuziwei7.github.io">Ziwei Liu</a>,
-                <a href="https://www.mmlab-ntu.com/person/ccloy/">Chen Change Loy</a>
+                <a href="https://junzhezhang.github.io/">Junzhe&nbsp;Zhang*</a>,
+                <strong>Yushi&nbsp;Lan*</strong>,
+                <a href="https://williamyang1991.github.io/">Shuai&nbsp;Yang</a>,
+                <a href="https://hongfz16.github.io/">Fangzhou&nbsp;Hong</a>,
+                <a href="https://scholar.google.com/citations?user=KmxEHm4AAAAJ&amp;hl=zh-TW&amp;citsig=AMD79oqVxlhCocLzrBL2zNFZqVusRRfYow">Quan&nbsp;Wang</a>,
+                <a href="https://personal.ntu.edu.sg/asckyeo/">Chai&nbsp;Kiat&nbsp;Yeo</a>,
+                <a href="https://liuziwei7.github.io">Ziwei&nbsp;Liu</a>,
+                <a href="https://www.mmlab-ntu.com/person/ccloy/">Chen&nbsp;Change&nbsp;Loy</a>
               </p>
               <p class="meta"><em>ICCV</em>, 2023</p>
               <!-- Was: DeformToon3D achieves high-quality geometry and texture stylization under given styles. -->
@@ -1233,11 +1354,11 @@
                 </a>
               </h3>
               <p class="meta">
-                <strong>Yushi Lan</strong>,
-                <a href="https://mengxuyigit.github.io/">Xuyi Meng</a>,
-                <a href="https://williamyang1991.github.io/">Shuai Yang</a>,
-                <a href="https://www.mmlab-ntu.com/person/ccloy/">Chen Change Loy</a>,
-                <a href="https://daibo.info/">Bo Dai</a>
+                <strong>Yushi&nbsp;Lan</strong>,
+                <a href="https://mengxuyigit.github.io/">Xuyi&nbsp;Meng</a>,
+                <a href="https://williamyang1991.github.io/">Shuai&nbsp;Yang</a>,
+                <a href="https://www.mmlab-ntu.com/person/ccloy/">Chen&nbsp;Change&nbsp;Loy</a>,
+                <a href="https://daibo.info/">Bo&nbsp;Dai</a>
               </p>
               <p class="meta"><em>CVPR</em>, 2023; <em>IJCV</em>, 2025</p>
               <p>
@@ -1286,11 +1407,11 @@
                 </a>
               </h3>
               <p class="meta">
-                <a href="https://hongfz16.github.io/">Fangzhou Hong</a>,
-                <a href="https://frozenburning.github.io/">Zhaoxi Chen</a>,
-                <strong>Yushi Lan</strong>,
-                <a href="https://scholar.google.com/citations?user=lSDISOcAAAAJ&amp;hl=zh-CN">Liang Pan</a>,
-                <a href="https://liuziwei7.github.io">Ziwei Liu</a>
+                <a href="https://hongfz16.github.io/">Fangzhou&nbsp;Hong</a>,
+                <a href="https://frozenburning.github.io/">Zhaoxi&nbsp;Chen</a>,
+                <strong>Yushi&nbsp;Lan</strong>,
+                <a href="https://scholar.google.com/citations?user=lSDISOcAAAAJ&amp;hl=zh-CN">Liang&nbsp;Pan</a>,
+                <a href="https://liuziwei7.github.io">Ziwei&nbsp;Liu</a>
               </p>
               <p class="meta"><em>ICLR</em>, 2023, <strong>Spotlight</strong></p>
               <p>
@@ -1333,9 +1454,9 @@
                 </a>
               </h3>
               <p class="meta">
-                <strong>Yushi Lan</strong>,
-                <a href="https://www.mmlab-ntu.com/person/ccloy/">Chen Change Loy</a>,
-                <a href="https://daibo.info/">Bo Dai</a>
+                <strong>Yushi&nbsp;Lan</strong>,
+                <a href="https://www.mmlab-ntu.com/person/ccloy/">Chen&nbsp;Change&nbsp;Loy</a>,
+                <a href="https://daibo.info/">Bo&nbsp;Dai</a>
               </p>
               <!-- Previously: IJCV, 2022. -->
               <p class="meta"><em>IJCV</em>, 2024</p>
@@ -1377,13 +1498,13 @@
                 </a>
               </h3>
               <p class="meta">
-                <strong>Yushi Lan*</strong>,
-                <a href="https://scholar.google.com/citations?user=gERzisMAAAAJ&amp;hl=en">Yuan Liu*</a>,
-                <a href="https://scholar.google.com/citations?user=AUFcWtwAAAAJ&amp;hl=en">Xinchi Zhou</a>,
-                <a href="https://scholar.google.com.hk/citations?user=UXFCqloAAAAJ&amp;hl=en">Maoqing Tian</a>,
-                <a href="https://scholar.google.com/citations?user=vInibgEAAAAJ&amp;hl=en">Xuesen Zhang</a>,
-                <a href="https://scholar.google.com/citations?user=afbbNmwAAAAJ&amp;hl=en">Shuai Yi</a>,
-                <a href="https://www.ee.cuhk.edu.hk/~hsli/">Hongsheng Li</a>
+                <strong>Yushi&nbsp;Lan*</strong>,
+                <a href="https://scholar.google.com/citations?user=gERzisMAAAAJ&amp;hl=en">Yuan&nbsp;Liu*</a>,
+                <a href="https://scholar.google.com/citations?user=AUFcWtwAAAAJ&amp;hl=en">Xinchi&nbsp;Zhou</a>,
+                <a href="https://scholar.google.com.hk/citations?user=UXFCqloAAAAJ&amp;hl=en">Maoqing&nbsp;Tian</a>,
+                <a href="https://scholar.google.com/citations?user=vInibgEAAAAJ&amp;hl=en">Xuesen&nbsp;Zhang</a>,
+                <a href="https://scholar.google.com/citations?user=afbbNmwAAAAJ&amp;hl=en">Shuai&nbsp;Yi</a>,
+                <a href="https://www.ee.cuhk.edu.hk/~hsli/">Hongsheng&nbsp;Li</a>
               </p>
               <p class="meta"><em>BMVC</em>, 2020</p>
               <p>
@@ -1520,11 +1641,11 @@
             </a>
           </h3>
           <p class="meta">
-            <a href="https://chenhonghua.github.io/clay.github.io/">Honghua Chen</a>,
-            <strong>Yushi Lan</strong>,
-            <a href="https://cyw-3d.github.io/">Yongwei Chen</a>,
-            <a href="https://zhouyifan.net/">Yifan Zhou</a>,
-            <a href="https://xingangpan.github.io/">Xingang Pan</a>
+            <a href="https://chenhonghua.github.io/clay.github.io/">Honghua&nbsp;Chen</a>,
+            <strong>Yushi&nbsp;Lan</strong>,
+            <a href="https://cyw-3d.github.io/">Yongwei&nbsp;Chen</a>,
+            <a href="https://zhouyifan.net/">Yifan&nbsp;Zhou</a>,
+            <a href="https://xingangpan.github.io/">Xingang&nbsp;Pan</a>
           </p>
           <p class="meta"><em>preprint</em>, 2024</p>
           <p class="links">
@@ -1550,13 +1671,13 @@
             </a>
           </h3>
           <p class="meta">
-            <a href="https://songlin1998.github.io/">Songlin Yang</a>,
-            <a href="http://cripac.ia.ac.cn/people/wwang/index.html">Wei Wang</a>,
-            <strong>Yushi Lan</strong>,
-            <a href="https://events.keep.edu.hk/cuhk/engg5700/2017/team/fan-xiangyu/">Xiangyu Fan</a>,
-            <a href="http://cripac.ia.ac.cn/en/EN/column/item139.shtml">Bo Peng</a>,
-            <a href="https://scholar.google.com/citations?hl=zh-CN&amp;user=jZH2IPYAAAAJ">Lei Yang</a>,
-            <a href="http://cripac.ia.ac.cn/people/jdong/">Jing Dong</a>
+            <a href="https://songlin1998.github.io/">Songlin&nbsp;Yang</a>,
+            <a href="http://cripac.ia.ac.cn/people/wwang/index.html">Wei&nbsp;Wang</a>,
+            <strong>Yushi&nbsp;Lan</strong>,
+            <a href="https://events.keep.edu.hk/cuhk/engg5700/2017/team/fan-xiangyu/">Xiangyu&nbsp;Fan</a>,
+            <a href="http://cripac.ia.ac.cn/en/EN/column/item139.shtml">Bo&nbsp;Peng</a>,
+            <a href="https://scholar.google.com/citations?hl=zh-CN&amp;user=jZH2IPYAAAAJ">Lei&nbsp;Yang</a>,
+            <a href="http://cripac.ia.ac.cn/people/jdong/">Jing&nbsp;Dong</a>
           </p>
           <p class="meta"><em>AAAI</em>, 2024</p>
           <p class="links">
@@ -1581,10 +1702,10 @@
             </a>
           </h3>
           <p class="meta">
-            <a href="https://cs.stanford.edu/~poole/">Ben Poole</a>,
-            <a href="https://www.ajayj.com/">Ajay Jain</a>,
-            <strong>Jonathan T. Barron</strong>,
-            <a href="https://bmild.github.io/">Ben Mildenhall</a>
+            <a href="https://cs.stanford.edu/~poole/">Ben&nbsp;Poole</a>,
+            <a href="https://www.ajayj.com/">Ajay&nbsp;Jain</a>,
+            <strong>Jonathan&nbsp;T.&nbsp;Barron</strong>,
+            <a href="https://bmild.github.io/">Ben&nbsp;Mildenhall</a>
           </p>
           <p class="meta"><em>arXiv</em>, 2022</p>
           <p class="links">
@@ -1618,8 +1739,9 @@
         const publicationTagLabels = {
           "world-models": "World Models",
           "video-generation": "Video Generation",
-          "3d-generation": "3D Generation",
-          "3d-4d-reconstruction": "3D/4D Reconstruction",
+          "3d-generation": "3D/4D Generation",
+          "agentic-3d": "Agentic 3D",
+          // "3d-4d-reconstruction": "3D/4D Reconstruction", (merged into Spatial Intelligence)
           "spatial-intelligence": "Spatial Intelligence",
           // "3d-avatars": "3D Avatars", (merged into 3D Generation)
           "3d-correspondence": "3D Correspondence",
@@ -1653,6 +1775,11 @@
         }
 
         function comparePublications(a, b, strategy) {
+          // data-priority (optional, higher first) pins featured items above the usual order.
+          const priorityDiff = Number(b.dataset.priority || "0") - Number(a.dataset.priority || "0");
+          if (priorityDiff !== 0) {
+            return priorityDiff;
+          }
           const authorRankA = Number(a.dataset.authorRank || "999");
           const authorRankB = Number(b.dataset.authorRank || "999");
           const yearA = Number(a.dataset.year || "0");
@@ -1749,6 +1876,15 @@
         // Tag pills hidden for a cleaner list; the filters above still use data-tags.
         // renderPublicationTags();
         applyPublicationFilter("all");
+
+        // "N more authors" expands the hidden middle of long author lists.
+        document.querySelectorAll(".more-authors-toggle").forEach((toggle) => {
+          toggle.addEventListener("click", (event) => {
+            event.preventDefault();
+            toggle.nextElementSibling.hidden = false;
+            toggle.remove();
+          });
+        });
 
         // Videos have no autoplay: each one downloads and plays only near the viewport.
         const videoObserver = new IntersectionObserver((entries) => {
